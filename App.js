@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, FlatList, View, Button } from 'react-native';
+import { FlatList, TouchableWithoutFeedback, Keyboard, View, Text, StyleSheet, TextInput, Button, Alert } from 'react-native';
 import ListItem from './components/ListItem'
 import ItemInput from './components/ItemInput'
 
@@ -25,6 +25,7 @@ export default function App() {
   }
 
   return (
+
     <View style={styles.mainScreen}>
       <Button title={"Add Item"} onPress={()=>setIsAdd(true)}/>
       <ItemInput visible={isAdd} setItem={setEnteredListItem} cancel={closeModal}inputHandler={listItemInputHandler} listItem={enteredListItem} addItemHandler={addItemHandler}/>

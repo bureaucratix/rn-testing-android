@@ -10,6 +10,8 @@ const ItemInput = props => {
 
     return (
         <Modal animationType="fade" visible={props.visible}>
+                <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+
           <View style={styles.input}>
             <TextInput placeholder="Input List Item" onChangeText={props.inputHandler} style={styles.inputText} value={props.listItem} />
            
@@ -23,6 +25,7 @@ const ItemInput = props => {
             </View>
             
           </View>
+          </TouchableWithoutFeedback>
       </Modal>
     ) 
 }
